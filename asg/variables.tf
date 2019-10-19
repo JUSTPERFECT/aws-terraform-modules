@@ -26,29 +26,6 @@ variable "associate_public_ip_address" {
 }
 
 
-variable "ebs_optimized" {
-  description = "launch instances with EBS-optimized"
-  default = ""
-}
-
-variable "root_block_device" {
-  description = "Customize details about the root block device of the instance"
-  type        = "list"
-  default     = []
-}
-
-variable "ebs_block_device" {
-  description = "Additional EBS block devices to attach to the instance"
-  type        = "list"
-  default     = []
-}
-
-variable "ephemeral_block_device" {
-  description = "ephemeral device add to instance"
-  type        = "list"
-  default     = []
-}
-
 variable "asg_name" {
   description = "name of autoscaling group"
 }

@@ -15,10 +15,6 @@ resource "aws_launch_configuration" "launch_config" {
   security_groups             = ["${var.vpc_security_group_ids}"]
   associate_public_ip_address = "${var.associate_public_ip_address}"
   user_data                   = "${data.template_file.cloud_config_amazon.rendered}"
-  ebs_optimized               = "${var.ebs_optimized}"
-  ebs_block_device            = "${var.ebs_block_device}"
-  ephemeral_block_device      = "${var.ephemeral_block_device}"
-  root_block_device           = "${var.root_block_device}"
 
   lifecycle {
     create_before_destroy = true
