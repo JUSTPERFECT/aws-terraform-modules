@@ -1,5 +1,5 @@
-output "addrees" {
-  value = "${aws_db_instance.rds_database_instance.*.addrees}"
+output "address" {
+  value = "${aws_db_instance.rds_database_instance.*.address}"
 }
 
 output "arn" {
