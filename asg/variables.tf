@@ -12,7 +12,7 @@ variable "cluster_properties" {
 variable "vpc_security_group_ids" {
   description = "security groups to be attached to launch configuration"
   type = "list"
-  default = ""
+  default = []
 }
 
 variable "image_id" {
