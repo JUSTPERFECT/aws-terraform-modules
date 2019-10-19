@@ -87,3 +87,7 @@ variable "maintenance_window" {
 variable "backup_window" {
   default = "03:00-06:00"
 }
+
+variable "security_group" {
+  default = ""
+}
