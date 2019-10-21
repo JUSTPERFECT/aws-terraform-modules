@@ -65,5 +65,5 @@ variable "force_delete" {
 
 variable "load_balancers" {
   description = "load balancer to attach with ASG"
-  default     = ""
+  default     = []
 }

@@ -20,7 +20,7 @@ output "classic_elb_dns_name" {
 
 output "classic_elb_instances" {
   description = "The list of instances in the ELB"
-  value       = ["${aws_elb.elb.instances}"]
+  value       = ["${aws_elb.elb.*.instances}"]
 }
 
 output "classic_elb_source_security_group_id" {
@@ -30,5 +30,5 @@ output "classic_elb_source_security_group_id" {
 
 output "classic_elb_zone_id" {
   description = "The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)"
-    value       = "${element(concat(aws_elb.elb.*.zone_id, list("")), 0)}"
+  value       = "${element(concat(aws_elb.elb.*.zone_id, list("")), 0)}"
 }
