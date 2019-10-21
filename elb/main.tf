@@ -11,8 +11,4 @@ resource "aws_elb" "elb" {
   listener                    = ["${var.listener}"]
   access_logs                 = ["${var.access_logs}"]
   health_check                = ["${var.health_check}"]
-
-  lifecycle {
-    ignore_changes = "tags.Created"
-  }
 }

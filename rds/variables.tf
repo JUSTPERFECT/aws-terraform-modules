@@ -91,3 +91,7 @@ variable "backup_window" {
 variable "security_group" {
   default = ""
 }
+
+variable "skip_final_snapshot " {
+  default = "false"
+}

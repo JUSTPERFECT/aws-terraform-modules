@@ -19,4 +19,5 @@ resource "aws_db_instance" "rds_database_instance" {
   backup_window               = "${var.backup_window}"
   maintenance_window          = "${var.maintenance_window}"
   vpc_security_group_ids      = ["${var.security_group}"]
+  skip_final_snapshot         = "${var.skip_final_snapshot}"
 }
