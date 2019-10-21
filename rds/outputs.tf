@@ -1,23 +1,23 @@
 output "address" {
-  value = "${aws_db_instance.rds_database_instance.*.address}"
+  value = "${element(aws_db_instance.rds_database_instance.*.address,0)}"
 }
 
 output "arn" {
-  value = "${aws_db_instance.rds_database_instance.*.arn}"
+  value = "${element(aws_db_instance.rds_database_instance.*.arn,0)}"
 }
 
 output "id" {
-  value = "${aws_db_instance.rds_database_instance.*.id}"
+  value = "${element(aws_db_instance.rds_database_instance.*.id,0)}"
 }
 
 output "name" {
-  value = "${aws_db_instance.rds_database_instance.*.name}"
+  value = "${element(aws_db_instance.rds_database_instance.*.name,0)}"
 }
 
 output "port" {
-  value = "${aws_db_instance.rds_database_instance.*.port}"
+  value = "${element(aws_db_instance.rds_database_instance.*.port,0)}"
 }
 
 output "username" {
-  value = "${aws_db_instance.rds_database_instance.*.username}"
+  value = "${element(aws_db_instance.rds_database_instance.*.username,0)}"
 }
