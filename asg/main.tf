@@ -35,6 +35,7 @@ resource "aws_autoscaling_group" "asg" {
   wait_for_elb_capacity     = "${var.wait_for_elb_capacity}"
   default_cooldown          = "${var.default_cooldown}"
   force_delete              = "${var.force_delete}"
+  load_balancers            = ["${var.load_balancers}"]
 
   lifecycle {
     create_before_destroy = true
